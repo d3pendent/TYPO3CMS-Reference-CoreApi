@@ -6,7 +6,7 @@ Data compiling
 ==============
 
 This is the first step of FormEngine. The data compiling creates an array containing all data
-the rendering needs to come up with a.result.
+the rendering needs to come up with a result.
 
 A basic call looks like this:
 
@@ -26,7 +26,7 @@ knows by its :code:`GET` or :code:`POST` parameters which record ("vanillaUid") 
 should be edited (command="edit") or created (command="new"), and sets this as init data to the DataCompiler. The
 controller also knows that it should render a full database record and not only parts of it, so it uses the
 :php:`TcaDatabaseRecord` data provider group to trigger all data providers relevant for this case. By calling :php:`->compile()`
-on this data group, all providers configured for this group are called after each other, and :php:`formData` ends up
+on this data group, all providers configured for this group are called one after the other, and :php:`formData` ends up
 with a huge array of data record details.
 
 
